@@ -32,13 +32,14 @@ public class Airkit {
         String LT_USER_NAME = System.getProperty("LT_USER_NAME", "");
         String LT_ACCESS_KEY = System.getProperty("LT_ACCESS_KEY", "");
         String tunnelFlag = System.getProperty("TUNNEL_FLAG");
+        String buildName = System.getProperty("BUILD_NAME");
         String hub = "@hub.lambdatest.com/wd/hub";
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platform", "MacOS Monterey");
         caps.setCapability("browserName", "Safari");
         caps.setCapability("version", "latest");
-        caps.setCapability("build", "TestNG With Java");
+        caps.setCapability("build", "buildName");
         caps.setCapability("name", m.getName() + this.getClass().getName());
         caps.setCapability("plugin", "git-testng");
         caps.setCapability("visual",true);
