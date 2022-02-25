@@ -43,7 +43,7 @@ public class Airkit {
         caps.setCapability("visual",true);
         // To view performance metrics
         caps.setCapability("performance", true);
-        caps.setCapability("tunnel",  true);
+//        caps.setCapability("tunnel",  true);
 
 
         String[] Tags = new String[] { "Feature", "Magicleap", "Severe" };
