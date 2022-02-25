@@ -31,6 +31,7 @@ public class Airkit {
 
         String LT_USER_NAME = System.getProperty("LT_USER_NAME", "");
         String LT_ACCESS_KEY = System.getProperty("LT_ACCESS_KEY", "");
+        String tunnelFlag = System.getProperty("TUNNEL_FLAG");
         String hub = "@hub.lambdatest.com/wd/hub";
 
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -43,7 +44,7 @@ public class Airkit {
         caps.setCapability("visual",true);
         // To view performance metrics
         caps.setCapability("performance", true);
-//        caps.setCapability("tunnel",  true);
+        caps.setCapability("tunnel",  tunnelFlag);
 
 
         String[] Tags = new String[] { "Feature", "Magicleap", "Severe" };
@@ -74,10 +75,8 @@ public class Airkit {
         //Copy file at destination
 
         FileUtils.copyFile(SrcFile, DestFile);
-//navigating to different url
+        //navigating to different url
         driver.get("https://lambdatest.github.io/sample-todo-app/");
-
-
     }
 
     @AfterMethod
