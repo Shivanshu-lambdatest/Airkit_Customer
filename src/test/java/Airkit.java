@@ -56,7 +56,7 @@ public class Airkit {
     public void basicTest() throws InterruptedException, IOException {
         String spanText;
         System.out.println("Loading Url");
-        driver.get("https://app.airkit.com/u/3LirStBQw0TIsTjTuC1Nc?");
+        driver.get("https://app.airkit.com/u/2q5Cg2pt088IeM9AWZbet?");
         // explicit wait - to wait for the compose button to be click-able
         WebDriverWait wait = new WebDriverWait(driver,30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Branch 1']")));
