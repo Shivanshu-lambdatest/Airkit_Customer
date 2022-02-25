@@ -39,7 +39,7 @@ public class Airkit {
         caps.setCapability("platform", "MacOS Monterey");
         caps.setCapability("browserName", "Safari");
         caps.setCapability("version", "latest");
-        caps.setCapability("build", "buildName");
+        caps.setCapability("build", buildName);
         caps.setCapability("name", m.getName() + this.getClass().getName());
         caps.setCapability("plugin", "git-testng");
         caps.setCapability("visual",true);
