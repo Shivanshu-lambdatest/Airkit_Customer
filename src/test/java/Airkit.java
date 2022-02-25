@@ -25,9 +25,12 @@ public class Airkit {
 
     @BeforeMethod
     public void setup(Method m, ITestContext ctx) throws MalformedURLException {
-        String username = System.getenv("LT_USERNAME") == null ? "saurabhlambdatest" : System.getenv("LT_USERNAME");
-        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "3822ZWc92Nlj14URYtqggRpVYHVk7pu7rs7Dqx1AjJe5NUHPRA" : System.getenv("LT_ACCESS_KEY");
+        String username = System.getenv("LT_USERNAME") == null ? "" : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "" : System.getenv("LT_ACCESS_KEY");
         ;
+
+        String LT_USER_NAME = System.getProperty("LT_USER_NAME", "");
+        String LT_ACCESS_KEY = System.getProperty("LT_ACCESS_KEY", "");
         String hub = "@hub.lambdatest.com/wd/hub";
 
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -40,13 +43,13 @@ public class Airkit {
         caps.setCapability("visual",true);
         // To view performance metrics
         caps.setCapability("performance", true);
-//        caps.setCapability("tunnel",  true);
+        caps.setCapability("tunnel",  true);
 
 
         String[] Tags = new String[] { "Feature", "Magicleap", "Severe" };
         caps.setCapability("tags", Tags);
 
-        driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+        driver = new RemoteWebDriver(new URL("https://" + LT_USER_NAME + ":" + LT_ACCESS_KEY + hub), caps);
     }
 
     @Test
