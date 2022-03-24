@@ -63,7 +63,7 @@ public class Airkit {
         // explicit wait - to wait for the compose button to be click-able
         WebDriverWait wait = new WebDriverWait(driver,30);
         driver.get("https://www.aajtak.in");
-        WebDriverWait wait = new WebDriverWait(driver,30);
+        //WebDriverWait wait = new WebDriverWait(driver,30);
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Branch 1']")));
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[contains(@src, '.com')]")));
         //TakesScreenshot scrShot =((TakesScreenshot)driver);
