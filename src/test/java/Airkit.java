@@ -80,6 +80,12 @@ public class Airkit {
 
         //FileUtils.copyFile(SrcFile, DestFile);
         //navigating to different url
+        driver.get("http://localhost:8000/");
+        Thread.sleep(9000);
+        driver.get("http://localhost.lambdatest.com:8000/");
+        Thread.sleep(9000);
+        driver.get("http://localhost.lambdatest.com/dashboard/");
+        Thread.sleep(9000);
         driver.get("https://lambdatest.github.io/sample-todo-app/");
     }
 
