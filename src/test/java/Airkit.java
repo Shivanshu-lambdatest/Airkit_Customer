@@ -58,24 +58,27 @@ public class Airkit {
     public void basicTest() throws InterruptedException, IOException {
         String spanText;
         System.out.println("Loading Url");
-        driver.get("https://app.airkit.com/u/2q5Cg2pt088IeM9AWZbet?");
+        //driver.get("https://app.airkit.com/u/2q5Cg2pt088IeM9AWZbet?");
+        driver.get("https://www.google.com");
         // explicit wait - to wait for the compose button to be click-able
         WebDriverWait wait = new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Branch 1']")));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[contains(@src, '.com')]")));
-        TakesScreenshot scrShot =((TakesScreenshot)driver);
+        driver.get("https://www.aajtak.in");
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Branch 1']")));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[contains(@src, '.com')]")));
+        //TakesScreenshot scrShot =((TakesScreenshot)driver);
 
         //Call getScreenshotAs method to create image file
 
-        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+        //File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 
         //Move image file to new destination
 
-        File DestFile=new File("src/test/java/Images/test.png");
+        //File DestFile=new File("src/test/java/Images/test.png");
 
         //Copy file at destination
 
-        FileUtils.copyFile(SrcFile, DestFile);
+        //FileUtils.copyFile(SrcFile, DestFile);
         //navigating to different url
         driver.get("https://lambdatest.github.io/sample-todo-app/");
     }
